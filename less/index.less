@@ -1,0 +1,249 @@
+// Is this working?
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 62.5%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 2;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+/* Set every element's box-sizing to border-box */
+* {
+	box-sizing: border-box;
+	
+
+html, body {
+	height: 100%;
+	font-family: 'Lato', sans-serif;
+	max-width: 100%;
+	border: 1px solid grey;
+}
+	
+}
+
+@main-white-color: white;
+@main-grey-color: #454443;
+@sec-grey-color: rgb(243, 243, 243);
+@third-blue-color: #2998ff;
+
+h1{
+	font-size: 3rem;
+	font-weight: 200;
+}
+
+h2{
+	font-size: 1.4rem;
+	font-weight: 500;
+}
+
+h3{
+	font-size: 1.2rem;
+	font-weight: 700;
+}
+
+p{
+	font-size: .9rem;
+	
+}
+.address{
+	display: flex;
+	justify-content: center;
+	background-color: @main-grey-color;
+	color: @main-white-color;
+	height: 7vh;
+
+	
+
+
+	div{
+		display: flex;
+		width: 30%;
+		justify-content: center;
+		align-items: center;
+		margin-right: .9rem;
+
+		
+
+		h3{
+			margin-right: 0.7rem;
+		}
+
+		p{
+			color: @sec-grey-color;
+
+		}
+
+		i{
+			margin-right: .5rem;
+			color: @third-blue-color;
+		}
+	}
+
+}
+.main-title{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+
+	h1{
+		width: 35%;
+		text-align: center;	
+		position:relative;
+		left: -3rem;	
+	}
+	
+	nav{
+		width: 40%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		a{
+			text-decoration:none;
+			color: @third-blue-color;
+
+		}
+	} 
+
+	
+
+}
+
+.header__main{
+	max-width: 100%;
+	display: flex;
+	margin: 0 auto;
+	background-color: @sec-grey-color;
+	padding:  3rem 10%;
+	align-items: center;
+	justify-content: space-evenly;
+
+	
+	.header__main--title{
+			padding: 2rem 2rem 0 0;
+			margin-right: 0;
+			width: 50%;
+
+			p{
+				font-size: 1.1rem;
+			}
+
+			.header__maintitle{
+				margin-bottom: 1rem;
+			}
+
+		}
+
+
+
+	.imgDiv{
+		width: 30%;
+		
+		
+	
+		
+	
+		img{
+			width: 80%;
+			height: 70%;
+			border-radius: 50%;
+			//opacity: 0.7;
+			filter: grayscale(70%);
+			
+		
+		}
+ 
+		
+	}
+}
+
+.section__main{
+	margin: 2rem auto 0;
+	padding: 3rem;
+
+
+	// border-bottom: 1px solid black;
+	
+	.section-work__ele{
+		margin:1rem auto;
+		width: 90%;
+		
+		ul{
+			list-style-type:square;
+		}
+	
+	}
+
+}
+
+.section--hobby{
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.section--edu{
+	background-color: @sec-grey-color;
+	margin-top: 0;
+	
+}
+
+footer{
+	
+
+
+	
+	background-color: @main-grey-color;
+	color: @main-white-color;
+	height: 13vh;
+	padding: 1rem;
+
+	.footer-div{
+		width: 85%;
+		margin: 0 auto;
+	
+		
+	}
+
+}

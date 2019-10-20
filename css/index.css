@@ -1,0 +1,264 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 62.5%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 2;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v16/S6uyw4BMUTPHjx4wWw.ttf) format('truetype');
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+* html,
+* body {
+  height: 100%;
+  font-family: 'Lato', sans-serif;
+  max-width: 100%;
+  border: 1px solid grey;
+}
+h1 {
+  font-size: 3rem;
+  font-weight: 200;
+}
+h2 {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+p {
+  font-size: 0.9rem;
+}
+.address {
+  display: flex;
+  justify-content: center;
+  background-color: #454443;
+  color: white;
+  height: 7vh;
+}
+.address div {
+  display: flex;
+  width: 30%;
+  justify-content: center;
+  align-items: center;
+  margin-right: 0.9rem;
+}
+.address div h3 {
+  margin-right: 0.7rem;
+}
+.address div p {
+  color: #f3f3f3;
+}
+.address div i {
+  margin-right: 0.5rem;
+  color: #2998ff;
+}
+.main-title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.main-title h1 {
+  width: 35%;
+  text-align: center;
+  position: relative;
+  left: -3rem;
+}
+.main-title nav {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-title nav a {
+  text-decoration: none;
+  color: #2998ff;
+}
+.header__main {
+  max-width: 100%;
+  display: flex;
+  margin: 0 auto;
+  background-color: #f3f3f3;
+  padding: 3rem 10%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.header__main .header__main--title {
+  padding: 2rem 2rem 0 0;
+  margin-right: 0;
+  width: 50%;
+}
+.header__main .header__main--title p {
+  font-size: 1.1rem;
+}
+.header__main .header__main--title .header__maintitle {
+  margin-bottom: 1rem;
+}
+.header__main .imgDiv {
+  width: 30%;
+}
+.header__main .imgDiv img {
+  width: 80%;
+  height: 70%;
+  border-radius: 50%;
+  filter: grayscale(70%);
+}
+.section__main {
+  margin: 2rem auto 0;
+  padding: 3rem;
+}
+.section__main .section-work__ele {
+  margin: 1rem auto;
+  width: 90%;
+}
+.section__main .section-work__ele ul {
+  list-style-type: square;
+}
+.section--hobby {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.section--edu {
+  background-color: #f3f3f3;
+  margin-top: 0;
+}
+footer {
+  background-color: #454443;
+  color: white;
+  height: 13vh;
+  padding: 1rem;
+}
+footer .footer-div {
+  width: 85%;
+  margin: 0 auto;
+}
