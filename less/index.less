@@ -94,7 +94,26 @@ p{
 	color: @main-white-color;
 	height: 7vh;
 
+	@media (max-width: 800px){
+		flex-direction: column;
+		align-items: center;
+		height: 20vh;
+
+
+	}
+
+	.add__address {
+		@media (max-width: 950px) {
+			width: 60%;
+		}
+
+	}
 	
+	.add__phone{
+		@media (max-width: 700px){
+			width: 100%;
+		}
+	}
 
 
 	div{
@@ -127,11 +146,23 @@ p{
 	display: flex;
 	justify-content: space-around;
 
+	@media (max-width: 700px){
+		flex-direction: column;
+		align-items: center;
+
+	}
+
 	h1{
 		width: 35%;
 		text-align: center;	
 		position:relative;
 		left: -3rem;	
+
+		@media (max-width: 700px){
+			
+			width: 80%;
+			
+		}
 	}
 	
 	nav{
@@ -139,6 +170,11 @@ p{
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		@media (max-width: 700px){
+			
+			width: 80%;
+			
+		}
 
 		a{
 			text-decoration:none;
@@ -159,12 +195,23 @@ p{
 	padding:  3rem 10%;
 	align-items: center;
 	justify-content: space-evenly;
+	@media (max-width: 700px){
+			
+		flex-direction: column;
+		align-items: center;
+		
+	}
 
 	
 	.header__main--title{
 			padding: 2rem 2rem 0 0;
 			margin-right: 0;
 			width: 50%;
+			@media (max-width: 700px){
+			
+				width: 80%;
+				
+			}
 
 			p{
 				font-size: 1.1rem;
@@ -180,8 +227,16 @@ p{
 
 	.imgDiv{
 		width: 30%;
+
+		@media (max-width: 1100px){
+			width: 50%;
+		}
 		
-		
+		@media (max-width: 700px){
+			
+			width: 80%;
+			
+		}
 	
 		
 	
@@ -238,10 +293,19 @@ footer{
 	color: @main-white-color;
 	height: 13vh;
 	padding: 1rem;
+	@media (max-width: 900px){
+			
+		height: 20vh;
+	
+		
+
+
+	}
 
 	.footer-div{
 		width: 85%;
 		margin: 0 auto;
+		
 	
 		
 	}
