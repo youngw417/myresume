@@ -214,8 +214,6 @@ p {
 .main-title h1 {
   width: 35%;
   text-align: center;
-  position: relative;
-  left: -3rem;
 }
 @media (max-width: 700px) {
   .main-title h1 {
