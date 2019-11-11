@@ -119,7 +119,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: '';
+  content: "";
   content: none;
 }
 table {
@@ -140,7 +140,7 @@ table {
 * html,
 * body {
   height: 100%;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   max-width: 100%;
   border: 1px solid grey;
 }
@@ -268,6 +268,7 @@ p {
 }
 .header__main .imgDiv {
   width: 30%;
+  overflow: hidden;
 }
 @media (max-width: 1100px) {
   .header__main .imgDiv {
@@ -281,7 +282,7 @@ p {
 }
 .header__main .imgDiv img {
   width: 80%;
-  height: 70%;
+  height: 90%;
   border-radius: 50%;
   filter: grayscale(70%);
 }
