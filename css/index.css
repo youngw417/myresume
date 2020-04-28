@@ -225,7 +225,7 @@ p {
 .main-title nav {
   width: 40%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 @media (max-width: 700px) {
@@ -235,6 +235,7 @@ p {
 }
 .main-title nav a {
   text-decoration: none;
+  margin-right: 2rem;
   color: #2998ff;
 }
 .header__main {
@@ -282,6 +283,7 @@ p {
     width: 80%;
   }
 }
+
 .header__main .imgDiv img {
   width: 80%;
   height: 90%;
@@ -303,7 +305,7 @@ p {
   padding-top: 0;
   padding-bottom: 0;
 }
-.section--edu {
+.section--work, .section--certificates {
   background-color: #f3f3f3;
   margin-top: 0;
 }
@@ -317,6 +319,10 @@ footer {
   footer {
     height: 20vh;
   }
+}
+.project-link {
+  text-decoration: none;
+  color: #2998ff;
 }
 footer .footer-div {
   width: 85%;
