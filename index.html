@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Young's Resume</title>
+  <title>Young Wook Won - Resume</title>
   <script src="https://kit.fontawesome.com/5f1aa7b8a4.js" crossorigin="anonymous"></script>     
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/index.css">
@@ -12,47 +12,53 @@
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
   <![endif]-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      document.getElementById('download-resume').addEventListener('click', function(e) {
+        e.preventDefault();
+        var imgDiv = document.querySelector('.imgDiv');
+        var oldDisplay = imgDiv ? imgDiv.style.display : '';
+        if (imgDiv) imgDiv.style.display = 'none';
+        document.body.classList.add('generating-pdf');
+        html2pdf().set({
+          filename: 'Young_Wook_Won_Resume.pdf',
+          margin: [12, 12, 12, 12],
+          image: { type: 'jpeg', quality: 0.98 },
+          html2canvas: { scale: 2 }
+        }).from(document.body).save().then(function() {
+          document.body.classList.remove('generating-pdf');
+          if (imgDiv) imgDiv.style.display = oldDisplay;
+        });
+      });
+    });
+  </script>
 </head>
 
 <body>
 
   <header>
     <address class="address">
-      <div class="add__phone">
-          <i class="fas fa-phone-volume"></i>
-        <h3>
-          Phone:
-        </h3>
-        <p style="color: white">
-          714-403-4714
-        </p>
-      </div>
-     
       <div class="add__email">
           <i class="fas fa-envelope"></i>
-          <h3>
-              email:
-            </h3>
-            <a href = "mailto: younw417@gmail.com" style="color: white;">
-              youngw417@gmail.com
-            </a>
+          <h3>Email:</h3>
+          <a href="mailto:youngw417@gmail.com" style="color: white;">youngw417@gmail.com</a>
       </div>
-
-      <div class="add__address">
-          <i class="fas fa-home"></i>
-            <h3>
-              address:
-            </h3>
-            <p>
-              719 Beacon, Irvine, CA 92618
-            </p>
+      <div class="add__phone">
+          <i class="fas fa-phone-volume"></i>
+          <h3>Korea:</h3>
+          <p style="color: white">82-10-5023-5369</p>
       </div>
-        
+      <div class="add__phone">
+          <i class="fas fa-phone-volume"></i>
+          <h3>US:</h3>
+          <p style="color: white">1-714-403-4714</p>
+      </div>
     </address>
 
     <div class="main-title">
       <h1 class="my-name">
-        Young Won
+        Young Wook Won
       </h1>
       <nav>
         
@@ -74,230 +80,95 @@
     ></a>
       <a
       class="top-nav"
-      href="images/yw_resume.pdf"
-      download ="young_won_resume.pdf"
-      title = "download resume"
+      href="#"
+      id="download-resume"
+      title="download resume (PDF without photo)"
       ><i class="fa fa-download"></i
     ></a>
       </nav>
     </div>
     <div class="header__main">
       <div class="header__main--title imgDiv">
-        <img src="images/headshot2.png" alt="Young Won's Image is here">
+        <img src="images/headshot2.png" alt="Young Wook Won">
       </div>
-      <div class="header__main--title descip">
+      <div class="header__main--title">
         <div class="header__maintitle">
-          <h2 class="obj-title">
-            Full Stack Web Developer 
-          </h2>
-          <h3>Software Engineer</h3>
-          Full Stack Web Engineer focused on new technologies, agile software development, and mission-driven work. Prior experience in Materials Science (5+ years) working on testing, research, and consulting. An additional 10+ years of teaching in high school students for the subjects in AP Computer Science, Statistics, Calculus, and Chemistry.
-          </p>
+          <h2 class="obj-title">Full Stack Developer | Cloud Software Engineer</h2>
+          <p><strong>Summary</strong><br>
+          Versatile Software Engineer with 5+ years of experience in designing, developing, and maintaining full-stack cloud-based applications. Proficient in Java, Spring Boot, Angular, and Azure. Proven ability to deliver scalable, secure, and reliable solutions through strong collaboration with cross-functional teams, including product managers, UX designers, and infrastructure teams. Expertise in CI/CD, DevOps practices, and cloud infrastructure as code. Former STEM instructor with a passion for continuous learning and mentoring.</p>
         </div>
         <div class="header__mainskill">
-            <h2 class="obj-title">
-              Key Skills
-            </h2>
-            Java Script and Python | React, Redux & React Native | NodeJs  | MongoDB, Postgres & SQLite | SQL | GraphQL & Knex | 
-TypeScript | SASS & LESS | HTML & CSS
-
-            </p>
-          </div>
+          <h2 class="obj-title">Technical Skills</h2>
+          <p><strong>Languages:</strong> Java, JavaScript, TypeScript, Python, Excel VBA/macros<br>
+          <strong>Frameworks & Libraries:</strong> Spring Boot, Angular, React<br>
+          <strong>Cloud & DevOps:</strong> Azure, Kubernetes, Docker, GitHub Actions, ArgoCD, DataDog, Azure (ADLS Gen2, Synapse, Event Grid, Functions)<br>
+          <strong>Databases:</strong> Cosmos DB, MySQL, PostgreSQL, Spark, Azure Synapse Analytics<br>
+          <strong>Tools & Platforms:</strong> IntelliJ IDEA, VS Code, Databricks, Tableau, ServiceNow, Docker<br>
+          <strong>Practices:</strong> Agile, CI/CD, Git & GitHub, Infrastructure as Code (IaC), RESTful APIs, Microservices, Odoo 17/18 (ORM, QWeb, server actions, cron)</p>
+        </div>
       </div>
       
     </div>
   </header>
   <section>
-    <div class="section__main section--project">
+    <div class="section__main section--work">
+      <h2 class="section-heading">Professional Experience</h2>
       <div class="section-work__ele">
-         
-        <h3>
-            <a href="https://youngw417.github.io/youngs-portfolio/story_squad.html" class="project-link">Story Squad </a>
-          </h3> 
-          <span class='h3-span'>Lab Project</span>
-          <p>
-            Lambda School (March, 2010 - May, 2020)
-          </p>
-          <ul>
-
-            <li>Platform targeted at young children to improve writing, comprehension, art, and analytical/critical thinking skills through weekly creative competitions</li>
-            <li>Worked as a backend developer in a team of 5, accomplished 2 product cycles for 8 weeks to build key features and reusable and scalable modules</li>
-            <li>Utilized React, TypeScript in Front-end and TypeORM with Postgres, NodeJS, and Docker containers in Back-end development</li>      
-          </ul>           
+        <h3>Founder / Software Developer</h3>
+        <p>Nexus Solution / Seoul, Korea | June 2025 – Current</p>
+        <ul>
+          <li>Founded an enterprise software consultancy serving global companies</li>
+          <li>Designed and built custom accounting software for a dry bulk ship management company, integrated with IMOS</li>
+          <li>Developed software updates for AI camera systems deployed on commercial ships</li>
+          <li>Integrated and modernized legacy systems to work with new cloud-based tools</li>
+          <li>Own full-stack architecture, integrations, and production deployments</li>
+        </ul>
+      </div>
+      <div class="section-work__ele">
+        <h3>Software Engineer</h3>
+        <p>UnitedHealth Group / Optum – Remote | Jan 2021 – May 2025</p>
+        <ul>
+          <li>Built and shipped full-stack features for a cloud-based Electronic Health Record system</li>
+          <li>Developed secure APIs and front-end interfaces using Java, Spring Boot, and Angular</li>
+          <li>Worked in a regulated healthcare environment with strict security and compliance requirements</li>
+          <li>Collaborated with product, design, and compliance teams to deliver production systems</li>
+        </ul>
+      </div>
+      <div class="section-work__ele">
+        <h3>Co-founder & Math / Computer Science Instructor</h3>
+        <p>CodeCreators / Future Academy | Jun 2009 – Dec 2020</p>
+        <ul>
+          <li>Co-founded and scaled a STEM education company serving advanced middle and high school students</li>
+          <li>Designed curriculum for 7+ advanced subjects, including AP Computer Science, AP Physics, linear algebra, and AP Statistics</li>
+          <li>Built lab-style coding courses and internal tools using HTML, CSS, JavaScript, and React</li>
+          <li>Hired, trained, and managed 30+ instructors</li>
+          <li>Helped struggling students consistently achieve AP pass rates above 90 percent</li>
+        </ul>
+      </div>
     </div>
-        <div class="section-work__ele">
-            <div class = 'linkDiv'>
-              <h3>
-              <a href="https://youngw417.github.io/youngs-portfolio/dev_desk.html" class="project-link">DevDesk Queue</a>
-              </h3> <span class='h3-span'>Lab Project</span>
-            </div>
-            
-              <p>
-                Lambda School (Jan, 2020)
-              </p>
-              <ul>
-                <li>Students at Lambda school need a place where they can escalate their concerns and receive help. This app allows an admin to manage help desk tickets that come in from Lambda School Students.</li>
-                <li>Worked as a backend developer in a team of 6 and provided RESTful API with creation of database schema for asynchronous database operations to serve HTTP requests by frond-end</li>
-                <li>Utilized React, NodeJS withSQLite for development and Postgres for deployment at Heroku</li>
-               
-  
-              </ul>           
-            </div>
 
-  </div>
-      <div class="section__main section--work">
-            <div class="section-work__ele">
-              
-              <h3>
-                  Team Lead
-                </h3>
-                <p>
-                  Lambda School, Full Stack Web Development (June, 2020 - Current)
-                </p>
-                <ul>
-                  <li>Provided daily feedback and issue resolution of all curriculum through slack help channel or code review</li>
-                  <li>Delivered one-on-one feedback and code review on a weekly basis</li>
-                  <li>Led a team of 8 students that emulates a real work environment using Agile methodology</li>
-                  <li>Mentored 9 students on how to learn effectively and solve programming problems</li>
-                  <li>Reviewed student code and provided detailed feedback on areas of improvement</li>
-                  <li>Facilitated daily standup meetings to build camaraderie, facilitate sharing of ideas and work progress, and provide guidance for that week’s study material</li>
-                </ul>           
-          </div>
-          <div class="section-work__ele">
-           
-              <h3>
-                  Co-Founder and Math/Computer Science Instructor
-                </h3>
-                <p>
-                  Future Academy/CodeCreators (2009-current)
-                </p>
-                <ul>
-                  <li>Created course syllabus for over 7 high school advanced subjects in math, science, and coding</li>
-                  <li>Hired over 30 math and science teachers and trained the teaching staff</li>
-                  <li>Provided IT services to Future Academy including computer setup and payroll software integration</li>
-                  <li>Created lab-style coding classes and cultivated teaching expertise in coding: HTML, CSS, SASS, JavaScript</li>
-                  <li>Instructed high school students in various AP subjects: Calculus, Chemistry, Physics, Statistics and Computer Science</li>
-                 
-                </ul>           
-          </div>
-          <div class="section-work__ele">
-           
-              <h3>
-                  Research and developement, General Manager
-                </h3>
-                <p>
-                  Paragon Toner (1996-2011)
-                </p>
-                <ul>
-                  <li>Analyzed and consulted performance of new product development in toner and ink</li>
-                  <li>Negotiated financial, partnership, and manufacturing deals with suppliers and customers</li>
-                  <li>Outlined and directed research and development plans</li>
-                </ul>           
-          </div>
-
-
-            <div class="section-work__ele">
-                <h3>
-                  Steel and Oil Product Consultant
-                </h3>
-                <p>
-                  Eastern Trading Corp. (1992-1996)
-                </p>
-                <ul>
-                  <li>Spearheaded client projects in the Korean Automotive industry for optimal steel alloy products</li>
-                  <li>Provided expertise advice to major Korean steel and oil companies (i.e. POSCO, Dongbu Steel, SK Oil, or Union Steel)
-                  for importing steel and oil products from South African steel company (ISCOR) and other major oil refineries</li>
-                  <li>Spoke at seminars and conventions for oil and steel trading in Korea</li>
-                </ul>
-          </div>
-
-          <div class="section-work__ele">
-           
-              <h3>
-                  Materials Science Engineer 
-              </h3>
-              <p>
-                 Metropolitan Water District (MWD) (1989-1992)
-              </p>
-              <ul>
-                  <li>Conducted over 100 material analyses for various metallurgical components in the company’s water supply system</li>
-                  <li>Inspected hydro-electric power plants to make recommendation for maintenance program</li>
-                  <li>Drafted and presented more than 200reports for scientific analysis on topics that included rectifying repetitive problems</li>
-              </ul>           
-          </div>
-
-    </div>
-    
     <div class="section__main section--edu">
-        <div class="section-work__ele">
-            <h3>
-             Lambda School 
-            </h3>
-            <p>
-             Full Stack Web Developer (2019)
-            </p>
-            <ul>
-              <li>10+ month Computer Science & Software Engineering Academy that provides an immersive hands-on curriculum with a focus on computer science, web and mobile development, UX design, and data science</li>
-              <li>Approached all coding challenges using pair programming</li>
-              <li>Utilized agile software development and Git workflow on all projects</li>
-              <li>Gained hands-on experience with client and server testing</li>
-              <li>Designed original user experiences across a range of web and mobile platforms, from ideation, to wireframing, to final product</li>
-              <li>Completed all curriculum course work including: React, React Native, Redux, Node, Express, MongoDB, Jest, Python, Django, etc.</li>
-              <li>Wrote production-ready code using ReactJS, Redux, and CSS on the frontend and NodeJS and Express on the backend to build single page applications</li>
-            </ul>
-          </div>
-      
-        <div class="section-work__ele">
-          <h3>
-            Univerity of Southern California (USC)
-          </h3>
-          <p>
-           Master of Science in Material Science Engineering (1989)
-          </p>
-          <ul>
-            <li>Doctorate Program in Material Science Engineering with full scholar ship</li>
-            <li>Research Assistance in Electrochemical Metallurgy and Semi-conductive materials under Dr. F. Mansfiled.</li>
-            <li>Completed all the doctorate required courses (about 60 units of graduate level courses which includes chemistry, quantum physics, mathematics and computer related classes)</li>
-          </ul>
-        </div>
-    
-        
-        <div class="section-work__ele">
-            <h3>
-                Korea Univerity
-              </h3>
-              <p>
-               Bachelor of Science in Metallurgical Engineering (1985)
-              </p>
-              
-        </div>
-    </div>
-    <div class="section__main section--certificates">
+      <h2 class="section-heading">Education</h2>
       <div class="section-work__ele">
-        <h3>Certificates</h3>
-        <ul>
-          <li>GraphQL with React, Udemy</li>
-          <li>Alorithms and Data Structures, Udemy </li>
-         <li>The Complete JavaScript Course 2020: Build Real Projects, Udemy</li>
-         <li>Materialize CSS, Udemy</li>
-         <li>Build Responsive Real World Websites with HTML5 & CSS3, Udemy</li>
+        <h3>University of Southern California – Los Angeles, CA</h3>
+        <p>Master of Science in Materials Science Engineering | Aug 1985 – May 1987</p>
+      </div>
+      <div class="section-work__ele">
+        <h3>Korea University – Seoul, Korea</h3>
+        <p>Bachelor of Science in Metallurgical Engineering | Mar 1980 – Feb 1985</p>
+      </div>
+    </div>
 
-        </ul>
-        
-      </div>
-      
-    </div>
-    <div class="section__main section--hobby">
+    <div class="section__main section--work">
+      <h2 class="section-heading">Previous Experience</h2>
       <div class="section-work__ele">
-        <h3> Continuing Education</h3>
-        <ul>
-          <li>CSET (California Subject Examinations for Teachers): Passed subject of Mathematics Subtest I, II and III</li>
-          <li>Completed 1 semester in Computer Science for Data Structure in C++ programming, Computer Architecture in California State University at Fullerton </li>
-         <li>Completed 1 semester in Computer Science; Computer Programming with C++, Linear Algebra I and II in Fullerton College</li>
-        </ul>
-        
+        <h3>Research & Development / General Manager</h3>
+        <p>Paragon Toner – Buena Park, CA | Jan 1996 – Jan 2009</p>
       </div>
-      
+      <div class="section-work__ele">
+        <h3>Material Science Engineer</h3>
+        <p>Metropolitan Water District (MWD) – La Verne, CA | Jun 1989 – Jan 1991</p>
+      </div>
     </div>
 
   </section>
